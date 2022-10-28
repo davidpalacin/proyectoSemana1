@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url('img/angel-1294401.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#tablero{
+    background-color: grey;
+    width: 600px;
+    height: 550px;
+    margin: 0 auto;
+}
+.fila{
+    display: flex;
+    height: calc(100% / 5);
+}
+.casilla{
+    height: auto;
+    width: calc(100% / 5);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.casilla-player2{
+    height: auto;
+    width: calc(100% / 5);
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.ficha{
+    height: auto;
+    width: calc(100% - 10px);
+}
