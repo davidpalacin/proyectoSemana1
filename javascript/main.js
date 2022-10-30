@@ -14,7 +14,7 @@ function drop(ev) {
   if(!ev.target.hasChildNodes()){
     ev.target.appendChild(document.getElementById(data));
 
-    var audio = new Audio('/movesound.wav');
+    var audio = new Audio('../assets/sound/movesound.wav');
     audio.play();
   }
 }
