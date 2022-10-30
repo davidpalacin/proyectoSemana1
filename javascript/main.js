@@ -14,7 +14,10 @@ function drop(ev) {
   if(!ev.target.hasChildNodes()){
     ev.target.appendChild(document.getElementById(data));
 
-    var audio = new Audio('../assets/sound/movesound.wav');
+  // Se necesita el raw=true para poder reproducir desde github pages. 
+  //https://github.com/davidpalacin/proyectoSemana1/blob/master/assets/sound/movesound.wav?raw=true
+
+    var audio = document.getElementById("movementSound");
     audio.play();
   }
 }
