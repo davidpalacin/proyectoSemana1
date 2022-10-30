@@ -13,17 +13,9 @@ function drop(ev) {
   //Si el div de destino no tiene hijos, se puede mover la ficha.
   if(!ev.target.hasChildNodes()){
     ev.target.appendChild(document.getElementById(data));
-    
-    var playSound = async () => {
-      var audio = new Audio("../assets/sound/movesound.wav");
-      try {
-          await audio.play();
-          console.log("Playing audio" + audio);
-      } catch (err) {
-          console.log("Failed to play, error: " + err);
-      }
-   };
-   playSound();
+
+    var audio = new Audio('/movesound.wav');
+    audio.play();
   }
 }
 
