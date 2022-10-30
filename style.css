@@ -49,11 +49,11 @@ div[class*="casilla"]{
     height: auto;
     width: calc(100% - 10px);
 }
-.casilla span{
-    color: black;
+.white-team{
+    color: rgb(204, 156, 0);
 }
-.casilla-player2 span{
-    color: white;
+.black-team{
+    color: grey;
 }
 span{
     font-size: 4.3em;
