@@ -4,13 +4,11 @@
     margin: 0;
 }
 body{
-    width: 100vw;
     height: 100vh;
 }
 .container{
     display: flex;
     align-items: center;
-    width: 100%;
     height: 100%;
 }
 .container::before{
@@ -34,19 +32,18 @@ body{
     display: flex;
     height: calc(100% / 8);
 }
-.casilla{
+div[class*="casilla"]{
     height: auto;
     width: calc(100% / 8);
-    background-color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.casilla{
+    background-color: white
 }
 .casilla-player2{
-    height: auto;
-    width: calc(100% / 8);
     background-color: black;
-    display: flex;
-    justify-content: center;
 }
 .ficha{
     height: auto;
@@ -57,4 +54,8 @@ body{
 }
 .casilla-player2 span{
     color: white;
+}
+span{
+    font-size: 4.3em;
+    cursor: grab;
 }
