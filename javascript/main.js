@@ -8,8 +8,12 @@ function drag(ev) {
 
 function drop(ev) {
   ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+  let data = ev.dataTransfer.getData("text");
+
+  //Si el div de destino no tiene hijos, se puede mover la ficha.
+  if(!ev.target.hasChildNodes()){
+    ev.target.appendChild(document.getElementById(data));
+  }
 }
 
 //guardo en arrays las casillas
@@ -28,7 +32,7 @@ for (let i = 0; i < casillas.length; i++) {
 
     casillasPlayerDos[i].setAttribute("ondrop", "drop(event)");
     casillasPlayerDos[i].setAttribute("ondragover", "allowDrop(event)");
-    
+
     fichas[i].setAttribute("draggable", "true");
     fichas[i].setAttribute("ondragstart", "drag(event)");
 }
